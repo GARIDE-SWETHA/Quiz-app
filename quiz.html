@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+    <style>
+        .Pie-container{
+            float: right;
+            position: relative;
+            bottom: 200px;
+            width: 256px;
+           height: 256px;
+        }
+        #pie-chart{
+            width: 256px;
+           height: 256px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WEB-TECHNOLOGY QUIZ</h1>
+    <center>
+        <hr>
+    </center>
+    <br>
+
+    <p id="intro">Welcome to Web-Technology Quiz, Test Your Knowledge on HTML,CSS,JS by attempting this Quiz
+        <br> You Will be given 1 minute to answer 10 questions <br> All the Best!!
+    </p>
+    <br> <br>
+    <button type="button" id="start" onclick="hiding()">Start</button>
+    <div id="imgs">
+        
+        <img src="/download.png" width="100px" alt="">
+        <img src="/CSS3_logo_and_wordmark.svg.png" width="75px" alt="">
+        <img src="/javascript_logo.png" width="100px" alt="">
+    </div>
+
+    <div id="main">
+        <nav>
+            <button type="button" onclick="jump(0)">HTML</button>
+            <button type="button" onclick="jump(3)">CSS</button>
+            <button type="button" onclick="jump(6)">JS</button>
+            <span id="Qno">
+                Question : 1/10
+            </span>
+        </nav>
+        <br>
+
+        <form action="" name="test" class="test" id="forms">
+            <div class="q1 questions">
+                <h2>1. HTML is an acronym of </h2>
+                <br>
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q1a1" name="q1" value="Hyper Terminal Marking Language" class="ans">
+                    <label for="q1a1"> Hyper Terminal Marking Language</label>
+                </p>
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q1a2" name="q1" value="How to Markup Library" class="ans">
+                    <label for="q1a2"> How to Markup Library</label>
+                </p>
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q1a3" name="q1" value="Hyper Text Markup Language" class="ans">
+                    <label for="q1a3"> Hyper Text Markup Language</label>
+                </p>
+
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q1a4" name="q1" value="Hyper Text Machine Language" class="ans">
+                    <label for="q1a4"> Hyper Text Machine Language</label>
+                </p>
+            </div>
+
+            <div class="q2 questions">
+                <h2>2. Which of the following is not a valid HTML tag declaration?</h2>
+                <br>
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q2a1" name="q2" value="<frameset columns=”30%,70%”>" class="ans">
+                    <label for="q2a1"> 	&lt;frameset columns=&quot;30%,70%&quot;&gt;</label>
+                </p>
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q2a2" name="q2" value="<frameset rows=”20%,80%”>" class="ans">
+                    <label for="q2a2"> &lt;frameset rows=&quot;20%,80%&quot;&gt;</label>
+                </p>
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q2a3" name="q2" value="<frameset cols=”10%,*”>" class="ans">
+                    <label for="q2a3"> &lt;frameset cols=&quot;10%,*&quot;&gt;</label>
+                </p>
+
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q2a4" name="q2" value="<frameset rows=”40%,*”>" class="ans">
+                    <label for="q2a4"> &lt;frameset rows=&quot;40%,*&quot;&gt;</label>
+                </p>
+            </div>
+
+            <div class="q3 questions">
+                <h2>3. Which of the following attributes of the font tag is used to choose the type of font in HTML?</h2>
+                <br>
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q3a1" name="q3" value="type" class="ans">
+                    <label for="q3a1"> type</label>
+                </p>
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q3a2" name="q3" value="text-type" class="ans">
+                    <label for="q3a2"> text-type</label>
+                </p>
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q3a3" name="q3" value="face" class="ans">
+                    <label for="q3a3"> face</label>
+                </p>
+
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q3a4" name="q3" value="font-type" class="ans">
+                    <label for="q3a4"> font-type</label>
+                </p>
+            </div>
+
+            <div class="q4 questions">
+                <h2>4. Which of the following is the correct syntax for importing a stylesheet in CSS?</h2>
+                <br>
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q4a1" name="q4" value="@import url(“example.css”);" class="ans">
+                    <label for="q4a1"> @import url(“example.css”);</label>
+                </p>
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q4a2" name="q4" value="@import-css url(“example.css”);" class="ans">
+                    <label for="q4a2"> @import-css url(“example.css”);</label>
+                </p>
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q4a3" name="q4" value="@import-style  url(“example.css”);" class="ans">
+                    <label for="q4a3"> @import-style  url(“example.css”);</label>
+                </p>
+
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q4a4" name="q4" value="@import-stylesheet url(“example.css”);" class="ans">
+                    <label for="q4a4"> @import-stylesheet url(“example.css”);</label>
+                </p>
+            </div>
+
+            <div class="q5 questions">
+                <h2>5. Which of the following HTML tags is used to refer to an external style sheet?</h2>
+                <br>
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q5a1" name="q5" value="<link url=”stylesheet” type=”text/css” href=”mystyle.css”>" class="ans">
+                    <label for="q5a1"> 	&lt;link url=&quot;stylesheet&quot; type=”text/css” href=”mystyle.css”&gt;</label>
+                </p>
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q5a2" name="q5" value="<style src=”mystyle.css”>" class="ans">
+                    <label for="q5a2"> &lt;style src=”mystyle.css”&gt;</label>
+                </p>
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q5a3" name="q5" value="<link rel=”stylesheet” type=”text/css” href=”mystyle.css”>" class="ans">
+                    <label for="q5a3"> &lt;link rel=”stylesheet” type=”text/css” href=”mystyle.css”&gt;</label>
+                </p>
+
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q5a4" name="q5" value="<stylesheet>mystyle.css</stylesheet>" class="ans">
+                    <label for="q5a4"> &lt;stylesheet&gt;mystyle.css</stylesheet></label>
+                </p>
+            </div>
+
+            <div class="q6 questions">
+                <h2>6. Which of the following ia an invalid CSS selector? </h2>
+                <br>
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q6a1" name="q6" value="Title selector" class="ans">
+                    <label for="q6a1"> Title selector</label>
+                </p>
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q6a2" name="q6" value="HEAD selector" class="ans">
+                    <label for="q6a2"> HEAD selector</label>
+                </p>
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q6a3" name="q6" value="TAG selector" class="ans">
+                    <label for="q6a3"> TAG selector</label>
+                </p>
+
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q6a4" name="q6" value="ID selector" class="ans">
+                    <label for="q6a4"> ID selector</label>
+                </p>
+            </div>
+
+            <div class="q7 questions">
+                <h2>7. Which of the following is the correct syntax to display “Hello World” on the screen?</h2>
+                <br>
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q7a1" name="q7" value="document.write[“Hello World”];" class="ans">
+                    <label for="q7a1"> document.write[“Hello World”]; </label>
+                </p>
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q7a2" name="q7" value="response.write(“Hello World”);" class="ans">
+                    <label for="q7a2"> response.write(“Hello World”);</label>
+                </p>
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q7a3" name="q7" value="window.write(“Hello World”);" class="ans">
+                    <label for="q7a3"> window.write(“Hello World”);</label>
+                </p>
+
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q7a4" name="q7" value="document.write(“Hello World”);" class="ans">
+                    <label for="q7a4"> document.write(“Hello World”);</label>
+                </p>
+            </div>
+
+            <div class="q8 questions">
+                <h2>8. Which of the following pops up an alert box? </h2>
+                <br>
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q8a1" name="q8" value="alert(“Hello World”);" class="ans">
+                    <label for="q8a1"> alert(“Hello World”);</label>
+                </p>
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q8a2" name="q8" value="show(“Hello World”);" class="ans">
+                    <label for="q8a2"> show(“Hello World”);</label>
+                </p>
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q8a3" name="q8" value="msgBox(“Hello World”);" class="ans">
+                    <label for="q8a3"> msgBox(“Hello World”);</label>
+                </p>
+
+
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q8a4" name="q8" value="pop(“Hello World”)" class="ans">
+                    <label for="q8a4"> pop(“Hello World”)</label>
+                </p>
+            </div>
+
+            <div class="q9 questions">
+                <h2>9.How do you call a function named “aFunction” ?</h2>
+                <br>
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q9a1" name="q9" value="aFunction()" class="ans">
+                    <label for="q9a1"> aFunction()</label>
+                </p>
+                
+                <br>
+                
+                <p class="options">
+                    <input type="radio" id="q9a2" name="q9" value="call Function aFunction" class="ans">
+                    <label for="q9a2"> call Function aFunction</label>
+                </p>
+                
+                <br>
+                
+                <p class="options">
+                    <input type="radio" id="q9a3" name="q9" value="call aFunction()" class="ans">
+                    <label for="q9a3"> call aFunction()</label>
+                </p>
+                
+                
+                <br>
+                
+                <p class="options">
+                    <input type="radio" id="q9a4" name="q9" value="execute aFunction()" class="ans">
+                    <label for="q9a4"> execute aFunction()</label>
+                </p>
+            </div>
+
+            <div class="q10 questions">
+                <h2>10. Which of the following is not a JavaScript operator?</h2>
+                <br>
+                <br>
+
+                <p class="options">
+                    <input type="radio" id="q10a1" name="q10" value="new" class="ans">
+                    <label for="q10a1"> new</label>
+                </p>
+                
+                <br>
+                
+                <p class="options">
+                    <input type="radio" id="q10a2" name="q10" value="this" class="ans">
+                    <label for="q10a2"> this</label>
+                </p>
+                
+                <br>
+                
+                <p class="options">
+                    <input type="radio" id="q10a3" name="q10" value="delete" class="ans">
+                    <label for="q10a3">  delete</label>
+                </p>
+                
+                
+                <br>
+                
+                <p class="options">
+                    <input type="radio" id="q10a4" name="q10" value="typeof" class="ans">
+                    <label for="q10a4"> typeof</label>
+                </p>
+            </div>
+
+
+            <button type="button" id="previous" onclick="Previous()">Previous</button>
+            <button type="button" id="reset" onclick="uncheck()">Reset</button>
+            <button type="button" id="next" onclick="Next(); scoreCalculate();">Save & Next</button>
+        </form>
+
+        <div class="timer" st>
+            <h1 align="center" id="sec">:60s</h1>
+            <img src="/2.gif" alt="" id="gif">
+        </div>
+    </div>
+
+        
+
+    <div id="report" >
+        <center>
+            <h1><u>Your Report</u> </h2>
+        </center>
+        <br>
+        <br><br>
+        <h3 align="left" id="score">Score : /10</h4>
+        <br><br>
+
+        <h3 align="left" id="accuracy">Accuracy :  %</h4>
+        <br><br>
+        
+        <h3 align="left" id="watch">Duration :  (:s)</h4>
+        <br>
+        <div class="Pie-container">
+            <div>
+                <canvas id="pie-chart"></canvas>
+            </div>
+        </div>
+
+        <center>
+
+            <p id="conclusion">
+                <span id="Text"></span>
+            </p>
+        </center>
+
+
+    </div>
+    <script>
+       
+	</script>
+</body>
+<script src="/index.js"></script>
+
+
+</html>
